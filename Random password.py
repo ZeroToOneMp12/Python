@@ -8,11 +8,13 @@ mot_de_passe = input("Entrez le mot de passe a trouver: ")
 # Fonction qui genere un mot de passe aleatoire
 def mot_aleatoire(longueur):
     lettres = string.ascii_letters
-    mot_genere = ""
-    for caract in range (0, longueur):
-        mot_genere = mot_genere + lettres[random.randint(0, len(lettres) - 1)]
-    return mot_genere
-
+    suiv = ""
+    resultat = ""
+    for i in range (len(mot_de_passe)):
+        while mot_de_passe[i] != suiv: 
+            suiv = random.choice(lettres)
+    resultat += suiv
+    return resultat
 
 # Boucle qui genere des mots de passes aleatoires jusqu'a ce qu'il trouve le bon
 debut = time.time()     
