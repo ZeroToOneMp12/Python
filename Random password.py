@@ -16,12 +16,17 @@ def mot_aleatoire(longueur):
     resultat += suiv
     return resultat
 
+deb = time.time()
+mot_aleatoire()
+print("Temps d'execution: " + str(time.time() - deb) + " secondes")
+
 # Boucle qui genere des mots de passes aleatoires jusqu'a ce qu'il trouve le bon
-debut = time.time()     
-while True:
-    mot_alea = mot_aleatoire(len(mot_de_passe))
-    if mot_de_passe == mot_alea:
-        print("Mot de passe trouve: " + mot_alea)
-        fin = time.time() - debut
-        print("Temps d'execution: " + str(fin) + " secondes")
-        break
+#debut = time.time()     
+#while True:
+#    mot_alea = mot_aleatoire(len(mot_de_passe))
+#    if mot_de_passe == mot_alea:
+#        print("Mot de passe trouve: " + mot_alea)
+#        fin = time.time() - debut
+#        print("Temps d'execution: " + str(fin) + " secondes")
+#        break
+
